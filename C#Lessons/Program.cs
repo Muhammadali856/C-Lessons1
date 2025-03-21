@@ -10,17 +10,29 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.Write("Nimani qaytaray ?: ");
-            String ChiqarishKerakBolganNarsa = Console.ReadLine();
-
-            Console.Write("Necha marta qaytarib beray ?: ");
-            int ChiqishSoni = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Birinchi raqamni kiriting: ");
+            int FirstNumber = Convert.ToInt32(Console.ReadLine());
 
 
-            for (int i = 1; i <= ChiqishSoni; i++)
+            Console.Write("Ikkinchi raqamni kiriting: ");
+            int SecondNumber = Convert.ToInt32(Console.ReadLine());
+
+            int answer = FirstNumber + SecondNumber;
+            int EnteredAnswer = 0;
+
+            while (EnteredAnswer != answer)
             {
-                Console.WriteLine(i+ ". " + ChiqarishKerakBolganNarsa);
+                Console.Write("Misolni yech latta: " + FirstNumber + " + " + SecondNumber + " = ");
+                EnteredAnswer = Convert.ToInt32(Console.ReadLine());
+
+                if (EnteredAnswer != answer)
+                {
+                    Console.WriteLine("Daje yaqin ham kelmading boq //🤮");
+                }
+
             }
+
+            Console.WriteLine("Bo'ladi :(");
 
             Console.ReadLine();
         }
