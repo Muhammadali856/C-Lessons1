@@ -10,18 +10,18 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a number: ");
-            string textAge = Console.ReadLine();
-            int number2 = Convert.ToInt32(textAge);
+            Console.Write("Enter day of the week: ");
+            var justnumber = Console.ReadLine();
+            int number = Convert.ToInt32(justnumber);
 
-            
-            //Console.Write(number2*2+5);
+            switch (number)
+            {
+                case 1: Console.WriteLine("Monday"); break;
+                case 2: Console.WriteLine("Tue"); break ;
+                case 3: Console.WriteLine("wed"); break;
+            }
 
-            Console.Clear();
-            Console.Write("The number, which you gave was multiplayed and 5 was added: ");
-            Console.WriteLine(number2*2+5);
-
-            Console.ReadLine();
+                Console.ReadLine();
         }
     }
 }
