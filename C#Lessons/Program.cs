@@ -10,18 +10,19 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter day of the week: ");
-            var justnumber = Console.ReadLine();
-            int number = Convert.ToInt32(justnumber);
+            Console.Write("Nimani qaytaray ?: ");
+            String ChiqarishKerakBolganNarsa = Console.ReadLine();
 
-            switch (number)
+            Console.Write("Necha marta qaytarib beray ?: ");
+            int ChiqishSoni = Convert.ToInt32(Console.ReadLine());
+
+
+            for (int i = 1; i <= ChiqishSoni; i++)
             {
-                case 1: Console.WriteLine("Monday"); break;
-                case 2: Console.WriteLine("Tue"); break ;
-                case 3: Console.WriteLine("wed"); break;
+                Console.WriteLine(i+ ". " + ChiqarishKerakBolganNarsa);
             }
 
-                Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }
