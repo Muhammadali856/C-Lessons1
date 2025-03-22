@@ -7,53 +7,47 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Diagnostics.Eventing.Reader;
 
-namespace HelloWorld
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        /*
+        //Exercise 1
+        Console.Write("Nechta raqam kiritmoqchisiz ?: ");
+        int takennumbers = Convert.ToInt32(Console.ReadLine());
+
+        int[] nums = new int[takennumbers];
+
+        for (int i = 0; i < takennumbers; i++)
         {
-            /*
-            //Execise 1
-            Console.Write("Ismingizni kiriting: ");
-            string name = Console.ReadLine();
-
-            for (int i = name.Length-1; i >= 0; i--)
-            {
-                Console.Write(name[i]);
-            }
-            */
-            /*
-            //Exercise 2
-            Console.Write("Parol kiriting: ");
-            string password1 = Console.ReadLine();
-            Console.Write("Qayta kiriting: ");
-            string password2 = Console.ReadLine();
-
-            if (!password1.Equals(string.Empty) )
-            {
-                if (!password2.Equals(string.Empty))
-                {
-                    if (password1 == password2)
-                    {
-                        Console.WriteLine("Parollar bir-biriga mos :)");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Parollar bir-biriga o'xshash emas");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Iltimos parolni tasdiqlashni kiriting");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Iltimos parolni kiriting :(");
-            }
-            */
-            Console.ReadLine();
+            Console.Write($"{i+1} - raqamni kriting: ");
+            nums[i] = Convert.ToInt32(Console.ReadLine());
         }
+
+
+        Console.WriteLine("Siz kiritgan raqamlar: ");
+        for (int i = 0; i < nums.Length; i++)
+        {
+            Console.Write($"{nums[i]}, ");
+        }
+        */
+
+        //Exercise 2
+        int angecount = 3;
+        int anglesum = 0;
+
+        for (int i = 0; i < angecount; i++)
+        {
+            Console.Write($"Enter anlge {i + 1}: ");
+            anglesum += Convert.ToInt32(Console.ReadLine());
+        }
+
+        Console.WriteLine(anglesum == 180 ? "Valid" : "Invalid");
+
+
+
+        Console.ReadLine();
     }
 }
+
