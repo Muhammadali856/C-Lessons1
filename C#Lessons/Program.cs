@@ -10,28 +10,40 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            bool succes = true;
+            /*
+            //First_exercise
+            Console.Write("Enter a number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
 
-            while (succes)
+            for (int i = 1; i <= 10; i++)
             {
-                Console.Write("Enter a number: ");
-                string numInput = Console.ReadLine();
+                int needed_number = number * i;
+                //Console.WriteLine(i + " * " + number + " = " + needed_number);
+                Console.WriteLine("{0} * {1} = {2}", i, number, needed_number);
+            }
+            */
 
-                if (int.TryParse(numInput, out int num))
+            //Second Exrescise
+            for (int i = 0; i <= 15; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
                 {
-                    succes = false;
-                    Console.WriteLine(num);
+                    Console.WriteLine("{0} is FizzBuzz", i);
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("{0}, is Fizz", i);
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("{0}, is Buzz", i);
                 }
                 else
                 {
-                    Console.WriteLine("Failed to convert");
+                    Console.WriteLine("{0}, is the False number", i);
                 }
             }
-
-
-            
-
-            Console.ReadLine();
+                    Console.ReadLine();
         }
     }
 }
