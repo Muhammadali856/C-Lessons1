@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
+using System.Diagnostics.Eventing.Reader;
 
 namespace HelloWorld
 {
@@ -11,39 +14,46 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             /*
-            //First_exercise
-            Console.Write("Enter a number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
+            //Execise 1
+            Console.Write("Ismingizni kiriting: ");
+            string name = Console.ReadLine();
 
-            for (int i = 1; i <= 10; i++)
+            for (int i = name.Length-1; i >= 0; i--)
             {
-                int needed_number = number * i;
-                //Console.WriteLine(i + " * " + number + " = " + needed_number);
-                Console.WriteLine("{0} * {1} = {2}", i, number, needed_number);
+                Console.Write(name[i]);
             }
             */
+            /*
+            //Exercise 2
+            Console.Write("Parol kiriting: ");
+            string password1 = Console.ReadLine();
+            Console.Write("Qayta kiriting: ");
+            string password2 = Console.ReadLine();
 
-            //Second Exrescise
-            for (int i = 0; i <= 15; i++)
+            if (!password1.Equals(string.Empty) )
             {
-                if (i % 3 == 0 && i % 5 == 0)
+                if (!password2.Equals(string.Empty))
                 {
-                    Console.WriteLine("{0} is FizzBuzz", i);
-                }
-                else if (i % 3 == 0)
-                {
-                    Console.WriteLine("{0}, is Fizz", i);
-                }
-                else if (i % 5 == 0)
-                {
-                    Console.WriteLine("{0}, is Buzz", i);
+                    if (password1 == password2)
+                    {
+                        Console.WriteLine("Parollar bir-biriga mos :)");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Parollar bir-biriga o'xshash emas");
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("{0}, is the False number", i);
+                    Console.WriteLine("Iltimos parolni tasdiqlashni kiriting");
                 }
             }
-                    Console.ReadLine();
+            else
+            {
+                Console.WriteLine("Iltimos parolni kiriting :(");
+            }
+            */
+            Console.ReadLine();
         }
     }
 }
