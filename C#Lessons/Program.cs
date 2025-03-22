@@ -7,47 +7,21 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Diagnostics.Eventing.Reader;
 
-
-internal class Program
+namespace functions
 {
-    static void Main(string[] args)
+    internal class Program
     {
-        /*
-        //Exercise 1
-        Console.Write("Nechta raqam kiritmoqchisiz ?: ");
-        int takennumbers = Convert.ToInt32(Console.ReadLine());
-
-        int[] nums = new int[takennumbers];
-
-        for (int i = 0; i < takennumbers; i++)
+        static void Main(string[] args)
         {
-            Console.Write($"{i+1} - raqamni kriting: ");
-            nums[i] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Ismingizni kiriting: ");
+            string TakenName = Console.ReadLine();
+            WelcomeMessager(TakenName);
+            Console.ReadLine();
         }
 
-
-        Console.WriteLine("Siz kiritgan raqamlar: ");
-        for (int i = 0; i < nums.Length; i++)
+        static void WelcomeMessager(string name)
         {
-            Console.Write($"{nums[i]}, ");
+            Console.WriteLine($"Assalomu aleykum {name}. Tizimga xush kelibsiz :) ");
         }
-        */
-
-        //Exercise 2
-        int angecount = 3;
-        int anglesum = 0;
-
-        for (int i = 0; i < angecount; i++)
-        {
-            Console.Write($"Enter anlge {i + 1}: ");
-            anglesum += Convert.ToInt32(Console.ReadLine());
-        }
-
-        Console.WriteLine(anglesum == 180 ? "Valid" : "Invalid");
-
-
-
-        Console.ReadLine();
     }
 }
-
